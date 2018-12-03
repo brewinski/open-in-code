@@ -1,0 +1,36 @@
+{
+  "name": "ts-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "oic": "./lib/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "start:dev": "npm run build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "compile:live": "nodemon --watch 'src/**/*.ts' --exec 'npm run build' -e ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^10.12.11",
+    "@types/commander": "^2.9.1",
+    "nodemon": "^1.18.7",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.1"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.118",
+    "async": "^2.6.1",
+    "chalk": "^2.4.1",
+    "commander": "^2.19.0",
+    "csv": "^5.0.0",
+    "inquirer": "^6.2.1",
+    "lodash": "^4.17.11",
+    "sendgrid": "^5.2.3"
+  }
+}
